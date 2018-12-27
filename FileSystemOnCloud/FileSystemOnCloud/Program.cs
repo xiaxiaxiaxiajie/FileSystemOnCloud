@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FileSystemOnCloud.function;
 
 namespace FileSystemOnCloud
 {
@@ -14,9 +15,15 @@ namespace FileSystemOnCloud
         [STAThread]
         static void Main()
         {
+            create_bucket.CreateBucket("lexsming");
+            file_upload.AppendObject("lexsming");
+
+
+            /*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            */
         }
     }
 }
