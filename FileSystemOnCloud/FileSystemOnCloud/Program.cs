@@ -16,7 +16,8 @@ namespace FileSystemOnCloud
         static void Main()
         {
             //create_bucket.CreateBucket("lexsming");
-            file_delete.DeleteObject("lexsming");
+            //file_delete.DeleteObject("lexsming");
+            create_empty_folder.CreateEmptyFolder("lexsming");
             /*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

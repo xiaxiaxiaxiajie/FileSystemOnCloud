@@ -71,6 +71,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="function\create_bucket.cs" />
+    <Compile Include="function\create_empty_folder.cs" />
     <Compile Include="function\delete_bucket.cs" />
     <Compile Include="function\file_delete.cs" />
     <Compile Include="function\file_upload.cs" />
