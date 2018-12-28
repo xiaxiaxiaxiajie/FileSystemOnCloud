@@ -19,14 +19,15 @@ namespace FileSystemOnCloud.function
         {
             try
             {
-                string key = null;
+                string key = "AppendObject.txt";
+                /*
                 var listResult = client.ListObjects(bucketName);
                 foreach (var summary in listResult.ObjectSummaries)
                 {
                     key = summary.Key;
                     break;
                 }
-
+                */
                 client.DeleteObject(bucketName, key);
 
                 Console.WriteLine("Delete object succeeded");

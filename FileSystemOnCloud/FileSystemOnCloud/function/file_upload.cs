@@ -26,13 +26,14 @@ namespace FileSystemOnCloud.function
         /// </summary>
         public static void AppendObject(string bucketName)//上传文件函数
         {
+            file_delete.DeleteObject(bucketName);
             SyncAppendObject(bucketName);
-            AsyncAppendObject(bucketName);
+            //AsyncAppendObject(bucketName);
         }
 
         public static void SyncAppendObject(string bucketName)
         {
-            const string key = "AppendObject";
+            const string key = "AppendObject.txt";
             long position = 0;
             ulong initCrc = 0;
             try
@@ -62,6 +63,7 @@ namespace FileSystemOnCloud.function
                     Console.WriteLine("Append object succeeded, next append position:{0}", position);
                 }
 
+                /*
                 // append object by using NextAppendPosition
                 using (var fs = File.Open(fileToUpload, FileMode.Open))
                 {
@@ -78,6 +80,7 @@ namespace FileSystemOnCloud.function
 
                     Console.WriteLine("Append object succeeded too, next append position:{0}", position);
                 }
+                */
             }
             catch (OssException ex)
             {
@@ -92,7 +95,7 @@ namespace FileSystemOnCloud.function
 
         public static void AsyncAppendObject(string bucketName)
         {
-            const string key = "AsyncAppendObject";
+            const string key = "AsyncAppendObject.txt";
             long position = 0;
             try
             {

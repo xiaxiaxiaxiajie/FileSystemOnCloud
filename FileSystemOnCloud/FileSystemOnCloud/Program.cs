@@ -15,10 +15,8 @@ namespace FileSystemOnCloud
         [STAThread]
         static void Main()
         {
-            create_bucket.CreateBucket("lexsming");
-            file_upload.AppendObject("lexsming");
-
-
+            //create_bucket.CreateBucket("lexsming");
+            file_delete.DeleteObject("lexsming");
             /*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
